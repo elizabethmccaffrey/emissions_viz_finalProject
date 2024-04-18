@@ -1,6 +1,6 @@
 //Define data
 update = undefined;
-const emissions_2022 = d3.csv("../data/emissions_data_2022.csv");
+const emissions_2022 = d3.csv("../../data/emissions_data_2022.csv");
 
 emissions_2022.then(function (data) {
     data.forEach(function (d) {

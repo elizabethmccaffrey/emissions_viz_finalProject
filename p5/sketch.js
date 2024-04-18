@@ -16,8 +16,8 @@ let year = 1970;
 let yearCounter = 0;
 
 function preload() {
-  countryMapping = loadTable('../data/world_country_and_usa_states_latitude_and_longitude_values.csv', 'header');
-  emissionsTotal_perYear = loadTable('../data/totalEmissions_perYear.csv', 'header');
+  countryMapping = loadTable('../emissions_viz_finalProject/data/world_country_and_usa_states_latitude_and_longitude_values.csv', 'header');
+  emissionsTotal_perYear = loadTable('../emissions_viz_finalProject/data/totalEmissions_perYear.csv', 'header');
 }
 
 function setup() {

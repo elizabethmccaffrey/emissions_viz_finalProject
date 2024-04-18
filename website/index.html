@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Country Specific Greenhouse Gas Emission Analysis</title>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <script src="../p5/libraries/p5.min.js"></script>
+  <script src="../p5/libraries/p5.sound.min.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oxygen:wght@300;400;700&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div class='format'>
+    <script src='https://d3js.org/d3.v7.min.js'></script>
+    <script src='main.js'></script>
+
+    <h2 class="oxygen-bold">Carbon Atlas</h2>
+    <h3 class="oxygen-light"><i>A Global Analysis of Country Specific Green House Gas Emissions</i></h3>
+
+    <p>The presence of greenhouse gases (GHGs) in the Earth's atmosphere is the primary culprit of generating the
+      phenomenon known as climate change.
+      Each year, globally, emissions of GHGs have been steadily increasing and furthering the drastic effects of climate
+      change on the planet. </p>
+
+    <p>GHGs are naturally generated and make up a layer of the Earth's atmosphere, retaining thermal radiation. The
+      primary GHGs consist of carbon dioxide (CO2),
+      methane (CH4), nitrous oxide (N2O), and F-gases (hydrofluorocarbons and perfluorocarbons). However, with the
+      increase in human industry, such as farming
+      and mass transport, the quantity of these gases has increased in the atmosphere. This increase in quantity
+      generates
+      greater heating effects furthering climate change.
+      The GHG effect has numerous climate impacts, including rising sea levels, glacial thawing, and species extinction
+      and/or migration; making the issue vital to observe and amend. </p>
+
+    <p>In these data visualizations I hope to examine country specific greenhouse gas emissions overtime, as well as
+      emission quantity breakdown by gas types. Additionally, each country’s GDP will also be considered in order to
+      draw connections between emission quantity and a country's economy. Finally, each country’s emissions per capita (emissions /
+      population) overtime will be observed in order to see how it compares to a country’s total emissions. </p>
+
+
+    <h3 class="oxygen-regular">Data Introduction</h3>
+
+    <p>The primary dataset that I am utilizing is from the European Commission, <i>EDGAR - Emissions Database for Global
+      Atmospheric Research</i>. From the database I am using the EDGAR GHG emissions dataset. This dataset categorizes the
+      data by and year (1970 - 2022). For each year, the dataset provides the total GHG emissions for each country. In
+      addition, the data set also categorizes by substance (type of GHG emitted) and sector (industry generating GHGs).
+      This creates a fine-grained data set as the emission level for each type of GHG can be identified, as well as the
+      level at which sectors are emitting these gases. In addition, I will also be using <i>The World Bank</i> datasets to gather
+      country
+      specific data of yearly gross domestic product (GDP) and population.</p>
+
+
+    <p>From each data set each country has year data ranging from 1970 - 2022 so every country has 52 GHG emission
+      (separated by sector [agriculture, buildings, fuel exploitation, industrial combustion, power industry, processes,
+      transport, waste], and gas type [C02, CH4, N20, F-gases]), GDP, and population data points. There are 209
+      countries
+      represented from which I will be selecting approximately 40 providing a wide range of data points and potential
+      comparisons to see trends through the analysis.</p>
+
+    <div class='center'>
+      <div id="sketch-container"></div>
+
+      <script src="../p5/sketch.js"></script>
+      <script src="../p5/Country.js"></script>
+      <script src="../p5/EmissionCircle.js"></script>
+    </div>
+
+    <div class="center">
+      <img src="mapKey-01.svg" alt="SVG Image" width="350" height="200">
+    </div>
+
+
+
+
+    <p>
+      To Introduce the data, we present the selected countries emissions geographically. In the animation each circle
+      visually represents the total emissions from the given country. The larger the circle the greater the countries
+      emissions. Additionally, color is used to show emission severity with green being low and red being high severity.
+      From the animation it can be seen that overtime
+      almost all countries emissions have increased or increased significantly. The primary examples of this is China's
+      change in emissions, starting off as a lower producer but eventually becoming the world's top producer by a large
+      margin. </p>
+
+    <h2 class="oxygen-regular">Visualizations</h2>
+
+    <div>
+      <div class='center'>
+        <iframe src='chart.html' width='90%' height='900px' frameborder='0'></iframe>
+      </div>
+
+      <p>We first present an overview of total greenhouse gas emissions overtime (1970 - 2022) by country. The goal of
+        this
+        visualization is to display the emission trends for each country and also compare emission quantity across
+        countries. We can see that both China and the United States are the worlds top greenhouse gas producers. This is
+        most likely due to both countries high levels of industry and mass production. Comparatively most other
+        countries
+        fall within mid-range emissions levels as most of the graph is clustered near the center, and produce
+        significantly
+        less emissions than the world top producers (as the scale on the y-axis is logarithmic). Interestingly we can
+        see
+        that Greenland has a high spike in emission production in 2003, while most other countries have a more gradual
+        increase.</p>
+    </div>
+
+    <div>
+      <div class='center'>
+        <iframe src='chart_comp.html' width='80%' height='575px' frameborder='0'></iframe>
+      </div>
+      <div class='center'>
+        <iframe src='chart_comp2.html' width='80%' height='575px' frameborder='0'></iframe>
+      </div>
+
+
+      <p>In addition to viewing a country's total emissions we can also see the emission breakdown by type of gas (ie.
+        CO2, CH4, N2O, and F-Gases). In these stacked bar charts, we highlight each distinct gas with a color and
+        separate
+        out the emissions by sector. Here we can also draw a comparison between two selected countries. In these charts
+        we
+        specifically observe the year 2022. It is interesting to view how countries emission distribution differ by
+        sector
+        and
+        type. Overall, the most prevalent gas produced is CO2. The most uncommon gas is the F-Gases, almost exclusively
+        produced within the Processes sector.</p>
+
+      <p>Additionally, we can also see the large difference in production between the world's top producing countries and
+        the rest of the world. We can see that China has extreme CO2 emissions within the Power and Industrial
+        Combustion
+        industries. While the United States splits between the Power Industry and Transport. These graphs also identify
+        industries which are critical to each country and how they allocate their resources. The isolated graphs exist
+        for
+        this purpose, as comparing China or the United States to a low producing country would create a negligible
+        comparison. </p>
+
+    </div>
+
+    <div>
+      <div class='center'>
+        <iframe src='chart_scatter.html' width='65%' height='400px' frameborder='0'></iframe>
+      </div>
+      <div>
+        <p>In order to see how a country's economy impacts it total emissions here we use a scatter plot to identify a
+          correlation between total emissions and total GDP per year. Instead of by country we perform an aggregate of
+          each
+          continent. In this plot we can generally see that an increase in GDP has a correlation with an increase in
+          total
+          emissions. This seems plausible as when a country's economic value increases, they would have more money to
+          invest
+          in industry, which produces many GHGs. Interestingly Europe has had a decline in emissions as GDP has
+          increased,
+          which could signify more regulations and reduction in emissions overtime while wealth has continued to
+          grow.
+        </p>
+      </div>
+    </div>
+
+
+    <div>
+      <div class='center'>
+        <iframe src='chart_capita.html' width='80%' height='870px' frameborder='0'></iframe>
+      </div>
+
+
+      <p>Another interesting area to observe for a country's emissions trends is to view emissions per capita overtime.
+        Instead of just using total emissions, emissions per capita depends on the population of the country.
+        This metric allows for an approximate idea of how many emissions each person generates within the country. This
+        can have a
+        much
+        different trend then total emissions.</p>
+
+      <p>In this graph we compare two countries at once viewing both the
+        emissions per capita overtime and total emissions overtime to compare within the country and to another country.
+        We can identify some interesting trends, such as a country with high total emissions, such as China, can
+        comparatively have a low emissions per capita. This is usually the case within high population countries, as the
+        emissions can be distrbuted amoungst a larger population. As such the
+        emissions per individual is not as much as a high emission and low population country.
+      </p>
+
+      <div>
+        <p class="graph">
+          Emissions per Capita by Country (2022)
+          </h2>
+
+        <div class="buttons">
+          <button id="emissionsPerCapitaButton">Sort by Emissions Per Capita</button>
+          <button id="populationButton">Sort by Population</button>
+          <button id="totalEmissionsButton">Sort by Total Emissions</button>
+          <div class='center'>
+            <svg id="plot"></svg>
+          </div>
+        </div>
+
+        <p>This visualization also looks at emissions per capita, but specifically in the year 2022. Here we compare all
+          the
+          selected countries and can sort by different characteristics, such as emissions per capita, population, and
+          total
+          emissions. The world's top ten producers are highlighted in red in order to see how they fall in the different
+          sorts. We can clearly see here the difference between total emissions and emissions per capita. As Qatar has
+          the
+          highest emissions per capita, but when sorting by total emissions the US and China move to the front leaving
+          Qatar
+          towards the back. This means that Qatar produces a lot of GHGs compared to its population. </p>
+
+      </div>
+
+      <h2 class="oxygen-regular">Conclusion</h2>
+
+      <p>From this visualization analysis, we can clearly see that greenhouse gas emissions are rising significantly
+        over
+        time. Additionally, the world's top producing countries are contributing to emissions significantly more than
+        the rest of
+        the
+        world.
+        From these observations it is evident we should make efforts to reduce our emissions, in order to prevent the
+        irreversible
+        damage
+        of climate change on the planet.
+      </p>
+
+      <p>
+        For further research into this topic, it would be interesting look more closely at GHG production within a
+        specific country. For example, looking into regional differences in a singular country and identifying the
+        higher
+        vs. lower producing areas. In addition, we could look more specifically at the emissions distribution across
+        social classes. For example, do citizens in higher income brackets typically generate greater emissions, and
+        where do they live within the country?
+      </p>
+
+      <h2 class="oxygen-regular">Credits</h2>
+      <p>
+        Visualizations designed and implemented by Elizabeth McCaffrey (mccaffrey.el@northeastern.edu) utilizing Altair,
+        D3.js, and p5.js libraries.
+      </p>
+
+      <p> For further reference: <br><br> European Commission, Joint Research Centre, Crippa, M., Guizzardi, D., Schaaf,
+        E.
+        (2023). GHG emissions of all world countries: 2023, Publications Office of the European Union.
+        https://data.europa.eu/doi/10.2760/953322 <br><br>
+        Onofrei, M., Vatamanu, A. F., & Cigu, E. (2022). The Relationship Between Economic Growth and CO2 Emissions in
+        EU Countries: A Cointegration Analysis. Frontiers in Environmental Science, 10.
+        https://doi.org/10.3389/fenvs.2022.934885
+      </p>
+    </div>
+
+  </div>
+
+
+
+  <!-- D3 ADD LATER
+  <h3>
+    Emissions per Capita by Country (2022)
+  </h3>
+  
+  <button id="emissionsPerCapitaButton">Sort by Emissions Per Capita</button>
+  <button id="populationButton">Sort by Population</button>
+  <button id="totalEmissionsButton">Sort by Total Emissions</button>
+
+  <svg id = "plot"></svg>
+  <script src='https://d3js.org/d3.v7.min.js'></script>
+  <script src='main.js'></script> -->
+</body>
+
+</html>

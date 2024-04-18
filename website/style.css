@@ -1,0 +1,92 @@
+/*html, body {
+  margin: 0;
+  padding: 0;
+}
+
+canvas {
+  display: block;
+}*/
+
+body {
+  /*
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 20px 20px;*/
+}
+
+canvas {
+  /* Optional: Add specific styles to the canvas */
+  border: 1px solid black;
+}
+
+.border {
+  /* Optional: Add specific styles to the canvas */
+  border: 1px solid black;
+
+}
+
+.center {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wide {
+  width: 2000px;
+  margin: 0 auto;
+  padding: 0 20px 20px 20px;
+}
+
+.format {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 20px 20px;
+}
+
+iframe {
+  margin-left: 70px
+}
+
+.oxygen-light {
+  font-family: "Oxygen", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.oxygen-regular {
+  font-family: "Oxygen", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.oxygen-bold {
+  font-family: "Oxygen", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+  width: 1000px;
+  margin: 0 auto;
+  padding: 20px 20px 20px 20px;
+}
+
+p.graph {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.buttons {
+  padding-left: 100px;
+}

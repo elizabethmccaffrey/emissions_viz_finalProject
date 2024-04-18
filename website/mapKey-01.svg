@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 429.06 207.45">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #eea513;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7 {
+        stroke-width: 0px;
+      }
+
+      .cls-2, .cls-8 {
+        fill: #000;
+      }
+
+      .cls-9 {
+        fill: #fff;
+      }
+
+      .cls-9, .cls-10 {
+        stroke: #000;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-3 {
+        fill: #17d122;
+      }
+
+      .cls-4 {
+        fill: #17d169;
+      }
+
+      .cls-10 {
+        fill: none;
+        stroke-width: .75px;
+      }
+
+      .cls-5 {
+        fill: #93d117;
+      }
+
+      .cls-8 {
+        font-family: MyriadPro-Regular, 'Myriad Pro';
+        font-size: 12px;
+      }
+
+      .cls-6 {
+        fill: #ee3413;
+      }
+
+      .cls-7 {
+        fill: #eee413;
+      }
+    </style>
+  </defs>
+  <circle class="cls-9" cx="82.5" cy="60.42" r="8.02"/>
+  <circle class="cls-9" cx="120.09" cy="60.42" r="12.98"/>
+  <circle class="cls-9" cx="166.53" cy="60.42" r="16.87"/>
+  <circle class="cls-9" cx="284.61" cy="60.42" r="26.14"/>
+  <circle class="cls-9" cx="51.88" cy="60.42" r="6.02"/>
+  <circle class="cls-9" cx="220.93" cy="60.42" r="21.53"/>
+  <text class="cls-8" transform="translate(326.76 110.59)"><tspan x="0" y="0">emissions (mt)</tspan></text>
+  <circle class="cls-4" cx="59.14" cy="126.9" r="12.98"/>
+  <circle class="cls-3" cx="102.74" cy="126.9" r="12.98"/>
+  <circle class="cls-5" cx="146.65" cy="126.9" r="12.98"/>
+  <circle class="cls-7" cx="190.4" cy="126.9" r="12.98"/>
+  <circle class="cls-1" cx="234.16" cy="126.9" r="12.98"/>
+  <circle class="cls-6" cx="277.91" cy="126.9" r="12.98"/>
+  <g>
+    <line class="cls-10" x1="52.69" y1="168.55" x2="283.79" y2="168.55"/>
+    <polygon class="cls-2" points="55.17 171.62 55.69 171.07 52.98 168.55 55.69 166.03 55.17 165.49 51.88 168.55 55.17 171.62"/>
+    <polygon class="cls-2" points="281.31 171.62 280.8 171.07 283.51 168.55 280.8 166.03 281.31 165.49 284.61 168.55 281.31 171.62"/>
+  </g>
+  <text class="cls-8" transform="translate(51.59 185.6)"><tspan x="0" y="0">0</tspan></text>
+  <text class="cls-8" transform="translate(259.59 185.6)"><tspan x="0" y="0">16,000</tspan></text>
+</svg>
